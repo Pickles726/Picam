@@ -13,7 +13,7 @@ def main():
 	takePicture()
 	time.sleep(3600)
 while True:
-if getTime() <=25200 or getTime() >= 64800
-	main()
+	if getTime() <=25200 or getTime() >= 64800:
+		main()
 
 sys.exit(0)
