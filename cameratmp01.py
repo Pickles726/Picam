@@ -17,7 +17,7 @@ def main():
 
 # Runs main() if getTime() meets the time range
 while True:
-	if getTime() <= 25200 or getTime() >= 64800
+	if getTime() <=25200 or getTime() >= 64800:
 		main()
 
 sys.exit(0)
