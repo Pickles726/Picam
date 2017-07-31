@@ -1,9 +1,9 @@
 from datetime import datetime
 from picamera import PiCamera
 import time
-now = datetime.now()
+
 def getTime():
-	now.hour*3600 + now.minute*60 + now.second
+	return datetime.now().hour*3600 + datetime.now().minute*60 + datetime.now().second
 def takePicture():
 	PiCamera.start_preview()
 	sleep(2)
