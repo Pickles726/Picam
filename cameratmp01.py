@@ -7,13 +7,15 @@ def getTime():
 	return datetime.now().hour*3600 + datetime.now().minute*60 + datetime.now().second
 
 def takePicture():
-	PiCamera.start_preview()
+#	PiCamera().start_preview()
 	time.sleep(2)
-	camera.capture_continuous('img{timestamp:%Y-%m-%d-%H-%M}.jpg')
+#	PiCamera().capture('img{timestamp:%Y-%m-%d-%H-%M}.jpg')
+	with open PiCamera() as camera:
+	camera.capture('img{timestamp:%Y-%m-%d-%H-%M}.jpg')
 
 def main():
 	takePicture()
-	time.sleep(3600)
+	time.sleep(30)
 
 # Runs main() if getTime() meets the time range
 while True:
