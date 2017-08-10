@@ -3,7 +3,7 @@ from picamera import PiCamera
 import time
 import os
 
-print os.getuid()
+#print os.getuid()
 #DATE = datetime.now().strftime('%m-%d-%y_%H%M%S')
 # Returns current time
 def getTime():
@@ -24,8 +24,10 @@ def takePicture():
 	
 # Runs main() if getTime() meets the time range
 while True:
+#	print datetime.now().hour
+#	print datetime.now().minute
 	print getTime()
-	if getTime() >=25200 or getTime() <= 64800:
+	if getTime() >=55200 and getTime() <= 64800:
 		takePicture()
 	time.sleep(3598)
 

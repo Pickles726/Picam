@@ -16,8 +16,8 @@ def takePicture():
 
 # Runs main() if getTime() meets the time range
 while True:
-	if getTime() >=25200 or getTime() <= 64800:
+	if getTime() >= 25200 and getTime() <= 64800:
 		takePicture()
-	time.sleep(3598)
+	time.sleep(15)
 
 sys.exit(0)
