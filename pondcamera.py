@@ -18,6 +18,6 @@ def takePicture():
 while True:
 	if getTime() >= 25200 and getTime() <= 64800:
 		takePicture()
-	time.sleep(15)
+	time.sleep(3598)
 
 sys.exit(0)
