@@ -5,7 +5,7 @@ import os
 
 # Create day directory, and get current day
 days = {'sun': 6, 'mon': 0, 'tue': 1, 'wed': 2 , 'thu': 3, 'fri': 4, 'sat': 5}
-day = datetime.datetime.today().weekday()
+day = datetime.today().weekday()
 
 # Returns current time
 def getTime():
@@ -25,6 +25,6 @@ while True:
 		# Runs if getTime() meets the time range of X and Y
 		if getTime() >= 25200 and getTime() <= 64800:
 			takePicture()
-		time.sleep(3598)
+		time.sleep(21598)
 
 sys.exit(0)
