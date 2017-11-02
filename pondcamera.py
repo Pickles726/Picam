@@ -23,8 +23,8 @@ while True:
 	# Checks to make sure day is not Sunday or Saturday
 	if day != days['sun'] and day != days['sat']:
 		# Runs if getTime() meets the time range of X and Y
-		if getTime() >= 25200 and getTime() <= 64800:
+		if getTime() >= 36000 and getTime() <= 64800:
 			takePicture()
-		time.sleep(30)
+		time.sleep(1800)
 
 sys.exit(0)
