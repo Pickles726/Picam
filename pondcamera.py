@@ -6,7 +6,6 @@ import sys
 
 # Create day directory, and get current day
 days = {'sun': 6, 'mon': 0, 'tue': 1, 'wed': 2 , 'thu': 3, 'fri': 4, 'sat': 5}
-day = datetime.today().weekday()
 
 # Returns current time
 def getTime():
@@ -20,10 +19,9 @@ def takePicture():
 		camera.capture('/media/pi/pondsusb/img%s.jpg' % DATE)
 
 while True:
-	# Checks to make sure day is not Sunday or Saturday
-	if day != days['sun'] and day != days['sat']:
-		# Runs if getTime() meets the time range of X and Y
-		if getTime() >= 36000 and getTime() <= 64800:
+	day = datetime.today().weekday() # Get day every loop
+	if day != days['sun'] and day != days['sat']: # Checks to make sure day is not Sunday or Saturday
+		if getTime() >= 36000 and getTime() <= 64800: # Runs if getTime() meets the time range of X and Y
 			takePicture()
 		time.sleep(1800)
 
